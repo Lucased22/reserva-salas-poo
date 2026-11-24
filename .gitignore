@@ -1,0 +1,12 @@
+# Compilados
+out/
+*.class
+
+# Banco de dados local (gerado em tempo de execução)
+salas.db
+
+# Bibliotecas baixadas (ver README para obter o driver)
+lib/*.jar
+
+# Arquivos de entrega gerados
+*.zip
