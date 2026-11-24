@@ -96,9 +96,15 @@ public class PainelReservas extends JPanel implements Atualizavel {
         centro.add(barraBusca, BorderLayout.NORTH);
         centro.add(new JScrollPane(tabela), BorderLayout.CENTER);
 
+        Utilitarios.estilizarTabela(tabela);
+        Utilitarios.destacar(btnReservar);
         tabela.setRowSorter(ordenacao);
         tabela.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         tabela.getColumnModel().getColumn(0).setMaxWidth(60);
+        int[] larguras = {50, 90, 70, 70, 150, 170, 300};
+        for (int i = 0; i < larguras.length; i++) {
+            tabela.getColumnModel().getColumn(i).setPreferredWidth(larguras[i]);
+        }
         Utilitarios.aoMudarTexto(txtBusca, this::aplicarFiltro);
 
         add(formulario, BorderLayout.NORTH);

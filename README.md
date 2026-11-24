@@ -56,6 +56,13 @@ java -cp "$libs;out" gui.Main
 
 Na primeira execução é criado o arquivo `salas.db` na pasta de onde o programa foi iniciado.
 
+## Apresentação
+
+A apresentação do trabalho está em `apresentacao/TP1-Apresentacao.pptx` (editável) e
+`apresentacao/TP1-Apresentacao.pdf`. As capturas de tela ficam em `apresentacao/capturas/`.
+
+![Janela principal](apresentacao/capturas/01-aba-salas.png)
+
 ## Gerar a documentação (Javadoc)
 
 ```powershell

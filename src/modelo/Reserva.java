@@ -2,6 +2,7 @@ package modelo;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Reserva de uma sala por um usuário em uma data e intervalo de horário.
@@ -120,6 +121,7 @@ public class Reserva {
 
     @Override
     public String toString() {
-        return sala.getNome() + " - " + data + " " + horaInicio + "-" + horaFim;
+        return sala.getNome() + " (" + data.format(DateTimeFormatter.ofPattern("dd/MM/uuuu"))
+                + ", " + horaInicio + "-" + horaFim + ")";
     }
 }

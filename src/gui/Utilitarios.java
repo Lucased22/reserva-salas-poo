@@ -3,11 +3,14 @@ package gui;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JComponent;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
@@ -54,6 +57,25 @@ final class Utilitarios {
         } catch (DateTimeParseException e) {
             throw new IllegalArgumentException("Horário inválido em \"" + campo + "\". Use o formato HH:mm.");
         }
+    }
+
+    /**
+     * Aplica o padrão visual das tabelas do sistema: linhas mais altas,
+     * cabeçalho em negrito e sem colunas verticais.
+     */
+    static void estilizarTabela(JTable tabela) {
+        tabela.setRowHeight(24);
+        tabela.setShowVerticalLines(false);
+        tabela.setIntercellSpacing(new Dimension(0, 1));
+        tabela.getTableHeader().setFont(tabela.getFont().deriveFont(Font.BOLD));
+        tabela.getTableHeader().setReorderingAllowed(false);
+    }
+
+    /**
+     * Destaca um botão principal de ação (texto em negrito).
+     */
+    static void destacar(JButton botao) {
+        botao.setFont(botao.getFont().deriveFont(Font.BOLD));
     }
 
     static void mostrarErro(Component pai, Exception e) {

@@ -10,3 +10,4 @@ lib/*.jar
 
 # Arquivos de entrega gerados
 *.zip
+doc/

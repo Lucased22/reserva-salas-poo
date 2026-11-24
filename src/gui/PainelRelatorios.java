@@ -67,6 +67,7 @@ public class PainelRelatorios extends JPanel implements Atualizavel {
         Utilitarios.adicionarLinhaCompleta(controles, 3,
                 Utilitarios.painelBotoes(btnGerar, btnImprimir, btnSalvar));
 
+        Utilitarios.destacar(btnGerar);
         areaRelatorio.setEditable(false);
         areaRelatorio.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 13));
         areaRelatorio.setMargin(new java.awt.Insets(8, 8, 8, 8));

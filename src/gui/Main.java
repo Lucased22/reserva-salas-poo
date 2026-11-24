@@ -3,6 +3,7 @@ package gui;
 import dao.ConexaoBD;
 
 import javax.swing.JOptionPane;
+import java.awt.Color;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import java.sql.SQLException;
@@ -46,5 +47,10 @@ public final class Main {
         } catch (Exception e) {
             // Mantém a aparência padrão do sistema caso o Nimbus não esteja disponível.
         }
+        // Paleta do sistema: azul-marinho (base), teal (seleção) e fundo claro.
+        UIManager.put("nimbusBase", new Color(0x1F, 0x3A, 0x5F));
+        UIManager.put("nimbusSelectionBackground", new Color(0x2A, 0x9D, 0x8F));
+        UIManager.put("nimbusSelectedText", Color.WHITE);
+        UIManager.put("control", new Color(0xF4, 0xF6, 0xF8));
     }
 }

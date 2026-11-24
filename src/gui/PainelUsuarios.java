@@ -85,6 +85,8 @@ public class PainelUsuarios extends JPanel implements Atualizavel {
         centro.add(barraBusca, BorderLayout.NORTH);
         centro.add(new JScrollPane(tabela), BorderLayout.CENTER);
 
+        Utilitarios.estilizarTabela(tabela);
+        Utilitarios.destacar(btnSalvar);
         tabela.setRowSorter(ordenacao);
         tabela.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         tabela.getColumnModel().getColumn(0).setMaxWidth(60);
